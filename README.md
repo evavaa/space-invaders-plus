@@ -2,6 +2,9 @@
 
 A Java implementation of the classic Space Invaders game with extended features, built using JGameGrid framework.
 
+<img width="748" alt="image" src="https://github.com/user-attachments/assets/f8757555-72ad-4332-be78-41c865940b2c" />
+
+
 ## Features
 
 - Classic Space Invaders gameplay
@@ -9,6 +12,22 @@ A Java implementation of the classic Space Invaders game with extended features,
 - Configurable game settings via properties files
 - Auto-testing capabilities for automated gameplay
 - Modern Java implementation with Gradle build system
+
+<img width="822" alt="image" src="https://github.com/user-attachments/assets/20bc2b53-ba6c-4c37-b356-ad3128f36230" />
+
+## Game Controls
+
+- **Arrow Keys (← →)**: Move spacecraft left/right
+- **Spacebar**: Fire bomb
+- **Any Key**: Start the game (when on start screen)
+
+## Game Instructions
+
+1. Use the arrow keys to move your spacecraft
+2. Press spacebar to shoot bombs at the aliens
+3. Destroy all aliens to win
+4. Avoid letting aliens reach your spacecraft
+
 
 ## Prerequisites
 
@@ -31,22 +50,9 @@ java -jar space-invaders-plus-1.0.jar properties/game2.properties
 
 ### Available Configurations
 The game includes several built-in configurations:
-- `properties/game1.properties` - Default configuration
-- `properties/game2.properties` - Alternative setup
-- `properties/game3.properties` - Extended features configuration
-
-## Game Controls
-
-- **Arrow Keys (← →)**: Move spacecraft left/right
-- **Spacebar**: Fire bomb
-- **Any Key**: Start the game (when on start screen)
-
-## Game Instructions
-
-1. Use the arrow keys to move your spacecraft
-2. Press spacebar to shoot bombs at the aliens
-3. Destroy all aliens to win
-4. Avoid letting aliens reach your spacecraft or hit you
+- `properties/game1.properties` - Simple version with normal aliens
+- `properties/game2.properties` - Extended version with Powerful, Invulnerable and Multiple aliens
+- `properties/game3.properties` - Extended version with Powerful, Invulnerable and Multiple aliens
 
 ## Development
 
