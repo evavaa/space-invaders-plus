@@ -1,7 +1,7 @@
 import java.util.Properties;
 
 public class Driver {
-    public static final String PROPERTIES_PATH = "properties/game2.properties";
+    public static final String PROPERTIES_PATH = "properties/game1.properties";
 
     public static void main(String[] args) {
         String propertiesPath = PROPERTIES_PATH;

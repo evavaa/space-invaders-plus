@@ -9,6 +9,8 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    // Add the Shadow plugin for creating fat JARs
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
 repositories {
@@ -35,4 +37,16 @@ java {
 application {
     // Define the main class for the application.
     mainClass = 'Driver'
+}
+
+// Configure the Shadow JAR
+shadowJar {
+    archiveBaseName.set('space-invaders-plus')
+    archiveClassifier.set('')
+    archiveVersion.set('1.0')
+    
+    // Ensure the manifest specifies the main class
+    manifest {
+        attributes 'Main-Class': 'Driver'
+    }
 }

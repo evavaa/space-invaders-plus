@@ -31,10 +31,10 @@ public class SpaceInvader extends GameGrid implements GGKeyListener {
     private boolean isAutoTesting;
     private static int alienNumRow;
     private static int alienNumCol;
+    private String spaceShipControl;
     private Spacecraft spacecraft = null;
     private Alien[][] alienGrid = null;
     private Version version;
-
 
     public SpaceInvader(Properties properties) {
         super(WINDOW_WIDTH, WINDOW_HEIGHT, CELL_SIZE, IS_NAVIGATION);
@@ -64,11 +64,11 @@ public class SpaceInvader extends GameGrid implements GGKeyListener {
         }
 
         if (isAutoTesting) {
-            setBgColor(java.awt.Color.black);  // Erase text
+            setBgColor(java.awt.Color.black); // Erase text
             doRun();
         }
 
-        while(!isGameOver) {
+        while (!isGameOver) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -91,7 +91,6 @@ public class SpaceInvader extends GameGrid implements GGKeyListener {
         spacecraft = new Spacecraft(this);
         addActor(spacecraft, new Location(100, 90));
 
-        String spaceShipControl = PROPERTIES.getProperty("space_craft.control");
         List<String> controls = null;
         if (spaceShipControl != null) {
             controls = Arrays.asList(spaceShipControl.split(";"));
@@ -149,10 +148,10 @@ public class SpaceInvader extends GameGrid implements GGKeyListener {
 
     public boolean keyPressed(KeyEvent evt) {
         if (!isRunning()) {
-            setBgColor(java.awt.Color.black);  // Erase text
+            setBgColor(java.awt.Color.black); // Erase text
             doRun();
         }
-        return false;  // Do not consume key
+        return false; // Do not consume key
     }
 
     public boolean keyReleased(KeyEvent evt) {
